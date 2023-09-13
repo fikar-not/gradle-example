@@ -20,5 +20,4 @@ jobs:
           use-gradlew: false
           gradle-build-module: |-
             :
-          gradle-build-configuration: |-
-            compileClasspath
+

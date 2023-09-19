@@ -20,6 +20,6 @@ jobs:
           use-gradlew: false
           gradle-project-path: "gradle-example"
           gradle-build-module: ":app"
-          distribution: "https://services.gradle.org/distributions/gradle-6.4.1-all.zip"
+
 
 

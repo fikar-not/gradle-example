@@ -20,6 +20,10 @@ jobs:
           use-gradlew: false
           gradle-project-path: "gradle-example"
           gradle-build-module: ":app"
+      - name: Debug Workspace
+        run: |
+          ls -la
+          ls -la gradle-example
 
 
 

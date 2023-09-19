@@ -1,0 +1,24 @@
+name: Dependency Scan
+
+on:
+  push:
+    branches:
+      - master # Modify to match the branch you want to trigger on
+
+jobs:
+  dependency_scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+
+      - name: Build and scan dependencies
+        run: |
+          ./gradlew clean assemble
+          ./gradlew dependencyCheckAnalyze -DdependencyCheck.failBuild=false
